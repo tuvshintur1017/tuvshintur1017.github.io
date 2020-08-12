@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>TODO</title>
+    <style>
+        #container {
+            height: 600px;
+            width: 400px;
+            background-color: seagreen;
+            margin: 0 auto;
+        }
+        
+        #seconddiv {
+            height: 520px;
+            width: 380px;
+            background-color: slateblue;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+        
+        #firstdiv {
+            margin: 0 auto;
+        }
+        
+        .inputstyle {
+            width: 250px;
+            height: 50px;
+        }
+        
+        .buttonstyle {
+            height: 60px;
+            width: 120px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="container">
+        <div id="firstdiv">
+            <input class="inputstyle" id="inputID" placeholder="todo item">
+            <button class="buttonstyle" onclick="buttonfunction()">+</button>
+        </div>
+        <div id="seconddiv">
+            <div>
+                <div class="text">buyfood</div>
+                <button onclick="remove()">-</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+        var x = document.getElementById("inputID")
+
+        function buttonfunction() {
+            document.getElementById("seconddiv").innerHTML = (x.value)
+            var item = document.querySelector("seconddiv").cloneNode(true)
+
+        }
+
+        function remove() {
+
+        }
+    </script>
+</body>
+
+</html>

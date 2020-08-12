@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>myobject1</title>
+
+</head>
+
+<body>
+    <input type="text" id="txt" name="username">
+    <input type="password" id="txt1" name="password">
+    <button onclick="input()">log in</button>
+    <button onclick=""> log out</button>
+    <script type="text/javascript">
+        var myUsers = [{
+            username: "Erdenee",
+            password: "123"
+        }, {
+            username: "turbold",
+            password: "1234"
+        }, {
+            username: "tamir",
+            password: "12345"
+        }]
+        var username = document.getElementById("txt")
+        var password = document.getElementById("txt1")
+        var canLogin = false
+
+
+        function input() {
+            for (var i = 0; i < myUsers.length; i++) {
+                if (username.value == myUsers[i].username && password.value == myUsers[i].password) {
+                    canLogin = true
+                }
+            }
+            if (canLogin) {
+                alert("log in")
+                if
+            } else {
+                alert("cant log in ")
+            }
+        }
+    </script>
+</body>
+
+</html>
