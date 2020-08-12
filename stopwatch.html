@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>stopwatch</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 100%;
+        }
+        
+        #start1 {
+            width: 100%;
+            font-size: 66px;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        #buttons {
+            text-align: center;
+        }
+        
+        .firstdiv {
+            background-color: red;
+            height: 200px;
+            width: 100px;
+        }
+        
+        .buttonstart {
+            width: 100px;
+        }
+        
+        #laps {
+            margin-left: 250px;
+            overflow: scroll;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="buttons">
+            <p id="start1" onclick="startbutton()">00:00:00</p>
+            <button class="buttonstart" onclick="run()">start</button>
+
+            <button id="reset1" onclick="reset()">reset</button>
+
+            <button id="lapID" onclick="lap()" disabled>lap</button>
+        </div>
+        <div id="laps">
+
+
+        </div>
+    </div>
+
+    </div>
+
+</body>
+<script>
+    var doli = 0
+    var second = 0
+    var minute = 0
+    var displayminute
+    var displaysecond
+    var displaydoli
+    var isPaused = true
+    var setintervalID
+    var laps = document.querySelector("#laps")
+    var x = 1
+    var lapno = document.getElementById("lapID")
+
+    function run() {
+        if (isPaused) {
+            setintervalID = setInterval(startbutton, 10, )
+            lapno.disabled = false
+        } else {
+            clearInterval(setintervalID)
+            lapno.disabled = true
+        }
+        isPaused = !isPaused
+    }
+
+    function startbutton() {
+
+        document.getElementById('start1').innerHTML = displayminute + ":" + displaysecond + ":" + displaydoli
+        doli++
+        if (doli == 100) {
+            doli = 0
+            second++
+        } else if (second == 60) {
+            second = 0
+            minute++
+        }
+        if (second < 10) {
+            displaysecond = "0" + second
+        } else {
+            displaysecond = second
+        }
+        if (doli < 10) {
+            displaydoli = "0" + doli
+        } else {
+            displaydoli = doli
+        }
+        if (minute < 10) {
+            displayminute = "0" + minute
+        } else {
+            dislpayminute = minute
+        }
+    }
+
+
+
+    function reset() {
+        start1.innerHTML = "00:00:00"
+        doli = 0
+        second = 0
+        minute = 0
+        if (!isPaused) {
+            run()
+        }
+        laps.innerHTML = ""
+        x = 1
+    }
+
+    function lap() {
+        var lapnumber = document.createElement("div")
+        var laptime = document.createElement("div")
+        lapnumber.innerHTML = x
+        laptime.innerHTML = displayminute + ":" + displaysecond + ":" + displaydoli
+        doli++
+        laps.append(lapnumber, laptime, )
+        x++
+
+    }
+</script>
+
+
+
+</html>
