@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-A-compatible" content="ie-edge">
-    <title>TODO</title>
+    <title>To Do</title>
     <style>
         #container {
             height: 600px;
@@ -49,7 +49,7 @@
         <div id="seconddiv">
             <div>
                 <div class="text">buyfood</div>
-                <button onclick="remove()">-</button>
+                <button onclick="remover()">-</button>
             </div>
         </div>
 
@@ -63,14 +63,19 @@
     <script>
         var x = document.getElementById("inputID")
 
+
         function buttonfunction() {
             document.getElementById("seconddiv").innerHTML = (x.value)
-            var item = document.querySelector("seconddiv").cloneNode(true)
+
+
+
+
+
 
         }
 
-        function remove() {
-
+        function remover(event) {
+            console.log(event.target.)
         }
     </script>
 </body>
