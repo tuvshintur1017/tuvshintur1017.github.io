@@ -1,0 +1,108 @@
+.firstdiv {
+    width: 100%;
+    height: 50px;
+    background-color: #0095ff;
+}
+
+.card-img-top {
+    height: 260px;
+    object-fit: cover;
+}
+
+.col-sm-12 {
+    margin-top: 30px;
+}
+
+.container-fluid {
+    width: 100%;
+    height: 900px;
+    background-image: url(image2/fish.jpg);
+    background-size: cover;
+}
+
+.card {
+    height: 480px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.carousel-control-next {
+    margin-right: 60px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 10px #2196f3, ;
+    color: #255784;
+    background: #0b97b3;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+
+a {
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 5px;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7CFF;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7CFF;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+a::before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color: #0D7CFF;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+li:hover:before,
+li:hover::after,
+li:hover a::before {
+    width: 100%;
+}
