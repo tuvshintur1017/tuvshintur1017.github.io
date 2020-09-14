@@ -16,7 +16,7 @@
 .container-fluid {
     width: 100%;
     height: 900px;
-    background-image: url(myPHOTOS/fish.jpg);
+    background-image: url(../myPHOTOS/fish.jpg);
     background-size: cover;
 }
 
