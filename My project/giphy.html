@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>giphy</title>
+    <style>
+        .mybutton {
+            height: 100px;
+            width: 100px;
+        }
+        
+        .firstdiv {
+            height: 1500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="firstdiv">
+        <input id="myinputID">
+        <button class="mybutton" onclick="getDATA">GO!</button>
+    </div>
+    <script>
+        var input = document.getElementById("myinputID")
+        const url = "https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="
+        const getDATA = async() => {
+            var response = await fetch(url + input.value)
+            var data = await response.json()
+            return data
+        }
+        const getinputvalue = () => {
+            return document.querySelector("input").value
+        }
+        const go = () => {
+
+        }
+    </script>
+</body>
+
+</html>
