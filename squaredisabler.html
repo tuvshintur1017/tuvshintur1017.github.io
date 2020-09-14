@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>square</title>
+    <style>
+        #disable {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 10px;
+            float: left;
+        }
+        
+        #disable2 {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 10px;
+            float: left;
+        }
+        
+        #disable3 {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 10px;
+            float: left;
+        }
+        
+        button {
+            width: 80px;
+            height: 30px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="disable">square 1</div>
+    <div id="disable2">square 2</div>
+    <div id="disable3"> square 3</div>
+
+
+
+    <button onclick="disabler()">disable</button>
+
+    <script>
+        var square = document.getElementById("disable")
+        var square2 = document.getElementById("disable2")
+        var square3 = document.getElementById("disable3")
+        var x = 0
+
+        function disabler() {
+            var square = document.getElementById("disable")
+            var square2 = document.getElementById("disable2")
+            var square3 = document.getElementById("disable3")
+            do {
+                x++
+            }
+            while (x > 5)
+            console.log(x)
+            if (x == 1) {
+                square.style.visibility = "hidden";
+
+            }
+            if (x == 2) {
+                square.style.visibility = "visible";
+                square2.style.visibility = "hidden";
+            } else if (x == 3) {
+                square.style.visibility = "visible";
+                square2.style.visibility = "visible";
+                square3.style.visibility = "hidden";
+
+            } else if (x == 4) {
+                square.style.visibility = "visible";
+                square2.style.visibility = "visible";
+                square3.style.visibility = "visible";
+                x = 0
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

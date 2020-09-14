@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>Slideshow</title>
+    <style>
+        div {
+            height: 1000px;
+            width: 1000px;
+            margin-left: auto;
+            background-image: url(image2/backgroundphoto.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img onclick="togglePause()" src="C:/Users/Dell/Pictures/Camera Roll/coldplay.jpg" id="img" width="500px" height="500px">
+    </div>
+
+    <script>
+        var myImg = ["C:/Users/Dell/Pictures/Camera Roll/coldplay.jpg", "D:/img/dlwlrma3.jpg", "D:/img/dlwlrma2.jpg"]
+        var i = 0
+        var imgElement = document.getElementById("img")
+        var Paused = false
+
+        function Changephoto() {
+            imgElement.src = myImg[i]
+            i++
+            if (i == myImg.length) {
+                i = 0
+            }
+        }
+
+        function togglePause() {
+            if (!Paused) {
+                clearInterval(intervalId)
+            } else {
+                intervalId = setInterval(Changephoto, 1000, )
+            }
+            Paused = !Paused
+        }
+        var intervalId = setInterval(Changephoto, 1000, )
+    </script>
+
+</body>
+
+</html>

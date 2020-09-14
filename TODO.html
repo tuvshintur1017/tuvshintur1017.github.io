@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-A-compatible" content="ie-edge">
-    <title>To Do</title>
+    <title>TODO</title>
     <style>
         #container {
             height: 600px;
@@ -36,6 +36,15 @@
             height: 60px;
             width: 120px;
         }
+        
+        .lapnumberstyle {
+            font-size: 30px;
+        }
+        
+        .buttonstyle2 {
+            width: 70px;
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -43,14 +52,14 @@
 <body>
     <div id="container">
         <div id="firstdiv">
-            <input class="inputstyle" id="inputID" placeholder="todo item">
+            <input class="inputstyle" id="inputID" placeholder="to do item" type="text">
             <button class="buttonstyle" onclick="buttonfunction()">+</button>
         </div>
         <div id="seconddiv">
-            <div>
-                <div class="text">buyfood</div>
-                <button onclick="remover()">-</button>
-            </div>
+
+
+
+
         </div>
 
 
@@ -61,21 +70,31 @@
 
 
     <script>
+        var i = 1
         var x = document.getElementById("inputID")
-
+        var myDiv = document.getElementById("seconddiv")
 
         function buttonfunction() {
-            document.getElementById("seconddiv").innerHTML = (x.value)
-
-
-
-
+            var bigdiv = document.createElement("div")
+            var lapnumber = document.createElement("div")
+            var laptext = document.createElement("div")
+            var myButton = document.createElement("button")
+            lapnumber.innerHTML = i
+            laptext.innerHTML = x.value
+            bigdiv.append(lapnumber, laptext, myButton)
+            myDiv.append(bigdiv)
+            i++
+            lapnumber.classList.add("lapnumberstyle");
+            laptext.classList.add("laptextstyle");
+            myButton.onclick = remover
+            myButton.classList.add("buttonstyle2")
+            myButton.innerHTML = "remove"
 
 
         }
 
-        function remover(event) {
-            console.log(event.target.)
+        function remover() {
+            event.path[1].remove()
         }
     </script>
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-A-compatible" content="ie-edge">
+    <title>myobject1</title>
+
+</head>
+
+<body>
+    <input type="text" id="myInputname" placeholder="username">
+    <input type="password" id="myInputpassword" placeholder="password">
+    <button onclick="inputLogin()">log in</button>
+    <button onclick="inputLogout()"> log out</button>
+    <div id="myDiv"></div>
+
+    <script>
+        var myUsers = [{
+            username: "erdenee",
+            password: "1"
+        }, {
+            username: "turbold",
+            password: "2"
+        }, {
+            username: "tamir",
+            password: "3"
+        }]
+
+        var username = document.getElementById("myInputname");
+        var password = document.getElementById("myInputpassword");
+        var myDiv = document.getElementById("myDiv");
+        var Login = false
+
+        function inputLogin() {
+
+            for (var i = 0; i < myUsers.length; i++) {
+                if (username.value == myUsers[i].username && password.value == myUsers[i].password) {
+                    myDiv.innerHTML = "logged in!"
+                    return
+                    if (Login) {
+                        alert("already logged in")
+                    }
+                    Login = !Login
+                } else {
+                    myDiv.innerHTML = "Username or password is wrong!"
+                }
+
+
+            }
+        }
+
+        function inputLogout() {
+
+        }
+    </script>
+</body>
+
+</html>
