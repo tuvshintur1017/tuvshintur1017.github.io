@@ -180,7 +180,7 @@ body {
     justify-content: center;
     background: #0095ba;
     text-align: center;
-    background-image: url(./myPHOTOS/fish.jpg);
+    background-image: url(../myPHOTOS/fish.jpg);
     background-size: cover;
 }
 
