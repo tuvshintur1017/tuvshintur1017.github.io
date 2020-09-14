@@ -7,18 +7,28 @@
     <meta http-equiv="X-A-compatible" content="ie-edge">
     <title>Slideshow</title>
     <style>
-        div {
-            height: 1000px;
-            width: 1000px;
+        .firstdiv {
+            height: 800px;
+            width: 100%;
             margin-left: auto;
-            background-image: url(image2/backgroundphoto.jpg);
+            background-image: url(./myPHOTOS/fish.jpg);
+            background-size: cover;
+        }
+        
+        .seconddiv {
+            margin: 0 auto;
+            height: 800px;
+            width: 100%;
+            margin: auto;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <img onclick="togglePause()" src="./myPHOTOS/coldplay.jpg" id="img" width="500px" height="500px">
+    <div class="firstdiv">
+        <div class="seconddiv">
+            <img onclick="togglePause()" src="./myPHOTOS/coldplay.jpg" id="img" width="500px" height="500px">
+        </div>
     </div>
 
     <script>
