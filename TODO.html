@@ -45,6 +45,23 @@
             width: 70px;
             height: 20px;
         }
+        
+        .laptextstyle {
+            display: inline-block;
+            width: 60%;
+            font-size: 20px;
+        }
+        
+        .lapnumberstyle {
+            display: inline-block;
+            width: 15%;
+        }
+        
+        .bigdivclass {
+            width: 100%;
+            background: aquamarine;
+            border: 1px solid white;
+        }
     </style>
 </head>
 
@@ -79,7 +96,7 @@
             var lapnumber = document.createElement("div")
             var laptext = document.createElement("div")
             var myButton = document.createElement("button")
-            lapnumber.innerHTML = i
+            lapnumber.innerHTML = i + "."
             laptext.innerHTML = x.value
             bigdiv.append(lapnumber, laptext, myButton)
             myDiv.append(bigdiv)
@@ -89,12 +106,14 @@
             myButton.onclick = remover
             myButton.classList.add("buttonstyle2")
             myButton.innerHTML = "remove"
+            bigdiv.className = "bigdivclass"
 
 
         }
 
         function remover() {
             event.path[1].remove()
+            i = 1
         }
     </script>
 </body>
