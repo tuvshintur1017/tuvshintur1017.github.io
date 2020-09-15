@@ -6,16 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-A-compatible" content="ie-edge">
     <title>game</title>
+    <style>
+        .firstdiv {
+            height: 800px;
+            width: 100%;
+            background-image: url(./myPHOTOS/fish.jpg);
+            background-size: cover;
+        }
+        
+        button {
+            width: 200px;
+            height: 60px;
+        }
+        
+        .seconddiv {
+            width: 50%;
+            height: 400px;
+            background-color: blue;
+            margin-left: 25%;
+            border-radius: 14px;
+        }
+        
+        .buttondiv {
+            width: 50%;
+            height: 60px;
+            text-align: center;
+            margin-left: 25%;
+        }
+        
+        p {
+            font-size: 50px;
+            margin-left: 3%;
+        }
+    </style>
+
 </head>
 
 <body>
-    <button onclick="game(0)">haich</button>
-    <button onclick="game(1)">chuluu </button>
-    <button onclick="game(2)">daavuu </button>
-    <p id="myType"></p>
-    <p id="cpuType"></p>
-    <p id="myPoint"></p>
-    <p id="cpuPoint"></p>
+    <div class="firstdiv">
+        <div class="buttondiv">
+            <button onclick="game(0)">haich</button>
+            <button onclick="game(1)">chuluu </button>
+            <button onclick="game(2)">daavuu </button>
+        </div>
+        <div class="seconddiv">
+            <p id="myType"></p>
+            <p id="cpuType"></p>
+            <p id="myPoint"></p>
+            <p id="cpuPoint"></p>
+        </div>
+    </div>
     <script type="text/javascript">
         var cpuType
         var myType
@@ -74,4 +114,4 @@
     </script>
 </body>
 
-</html
+</html>

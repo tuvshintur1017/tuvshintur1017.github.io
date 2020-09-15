@@ -8,46 +8,61 @@
     <meta http-equiv="X-A-compatible" content="ie-edge">
     <title>square</title>
     <style>
+        .firstdiv {
+            height: 800px;
+            width: 100%;
+            background-image: url(./myPHOTOS/fish.jpg);
+            background-size: cover;
+        }
+        
         #disable {
             width: 200px;
             height: 200px;
-            background-color: aquamarine;
+            background-color: #0073ff;
             margin: 10px;
             float: left;
+            border-radius: 14px;
         }
         
         #disable2 {
             width: 200px;
             height: 200px;
-            background-color: aquamarine;
+            background-color: #0073ff;
             margin: 10px;
             float: left;
+            border-radius: 14px;
         }
         
         #disable3 {
             width: 200px;
             height: 200px;
-            background-color: aquamarine;
+            background-color: #0073ff;
             margin: 10px;
             float: left;
+            border-radius: 14px;
         }
         
         button {
             width: 80px;
-            height: 30px
+            height: 30px;
+            background-color: #00c0f5;
+            margin-top: 180px;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div id="disable">square 1</div>
-    <div id="disable2">square 2</div>
-    <div id="disable3"> square 3</div>
+    <div class="firstdiv">
+        <div id="disable"></div>
+        <div id="disable2"></div>
+        <div id="disable3"></div>
 
 
 
-    <button onclick="disabler()">disable</button>
 
+        <button onclick="disabler()">disable</button>
+    </div>
     <script>
         var square = document.getElementById("disable")
         var square2 = document.getElementById("disable2")
