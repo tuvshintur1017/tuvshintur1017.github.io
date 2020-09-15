@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-A-compatible" content="ie-edge">
     <title>myobject1</title>
+    <style>
+        .firstdiv {
+            background-image: url(./myPHOTOS/fish.jpg);
+            height: 800px;
+            width: 100%;
+            background-size: cover;
+        }
+        
+        input {
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        
+        button {
+            height: 50px;
+            width: 100px;
+            background: #0073ff;
+            border-radius: 10px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <input type="text" id="myInputname" placeholder="username">
-    <input type="password" id="myInputpassword" placeholder="password">
-    <button onclick="inputLogin()">log in</button>
-    <button onclick="inputLogout()"> log out</button>
-    <div id="myDiv"></div>
+    <div class="firstdiv">
+        <input type="text" id="myInputname" placeholder="username">
+        <input type="password" id="myInputpassword" placeholder="password">
+        <button onclick="inputLogin()">log in</button>
+        <button onclick="inputLogout()"> log out</button>
+        <div id="myDiv"></div>
+    </div>
 
     <script>
         var myUsers = [{
