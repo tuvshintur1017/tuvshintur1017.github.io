@@ -1,243 +1,106 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Tutu's project</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a03a69afb3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ba68c8;
+}
+
+.profile-button {
+  background: rgb(99, 39, 120);
+  box-shadow: none;
+  border: none;
+}
+
+.profile-button:hover {
+  background: #682773;
+}
+
+.profile-button:focus {
+  background: #682773;
+  box-shadow: none;
+}
+
+.profile-button:active {
+  background: #682773;
+  box-shadow: none;
+}
+
+.back:hover {
+  color: #682773;
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 11px;
+}
+
+.add-experience:hover {
+  background: #ba68c8;
+  color: #fff;
+  cursor: pointer;
+  border: solid 1px #ba68c8;
+}
+.navbar-brand{
+    font-weight: 300;
+    color: blue;
+}
+
+    </style>
 </head>
-
 <body>
-
-    <div class="firstdiv">
-        <nav class="navbar navbar-expand-lg navbar-danger bg-danger">
-            <a class="navbar-brand" href="#">BLACKPINK THEMED</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=""></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    MORE PROJECTS
-                  </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./Slideshow.html">Slideshow</a>
-                            <a class="dropdown-item" href="./squaredisabler.html">Square disabler</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="./login.html">Log in </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container-fluid">
+    <div class="container rounded bg-white mt-5 mb-5">
+       <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#" style="font-weight: 600; color: darkblue;" style="color:blue">
+      <img src="./emongoliaPicture.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      E-mongolia
+    </a>
+  </nav>
         <div class="row">
-            <div class="col-sm-12">
-                <div id="inam" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-4">
-
-                                        <div id="Cards" class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/stopwatch10.jpg " class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Stopwatch</h5>
-                                                <p class="card-text "> A large digital version of a stopwatch designed for viewing at a distance, as in a sports stadium, is called a stop clock.</p>
-                                                <a href="./stopwatch.html" class="btn btn-danger">Use Stopwatch</a>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                        <div class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/todo.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">To do application</h5>
-                                                <p class="card-text"> To-do lists don't need to be complicated—plenty of people use a pen and paper for the job without any problem.</p>
-                                                <a href="./TODO.html" class="btn btn-danger">Use To Do App</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-
-                                        <div class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/colors4.png" class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">background-color changer</h5>
-                                                <p class="card-text">Color is the visual perception of a wavelength of energy in the electromagnetic spectrum. </p>
-                                                <a href="./backgroundcolorchanger1.html" class="btn btn-danger">Use Color-Changer</a>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12 col-lg-4">
-                                        <div class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/haich.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Paper rock scissors</h5>
-                                                <p class="card-text">Color is the visual perception of a wavelength of energy in the electromagnetic spectrum. </p>
-                                                <a href="./haichchuluudaavuu.html" class="btn btn-danger">Use Paper Rock Game</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                        <div class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/random.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Random Array</h5>
-                                                <p class="card-text">Color is the visual perception of a wavelength of energy in the electromagnetic spectrum. </p>
-                                                <a href="./myArray.html" class="btn btn-danger">Use Random Array</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-sm-12 col-lg-4">
-                                        <div class="card shadow" style="width: 18rem;">
-                                            <img src="myPHOTOS/calc.jpg" class="card-img-top" alt="...">
-                                            <div class="card-body text-center">
-                                                <h5 class="card-title">Calculator</h5>
-                                                <p class="card-text"> a portable electronic device used to perform calculations, ranging from basic arithmetic to complex mathematics. </p>
-                                                <a href="./calculator.html" class="btn btn-danger">Use Calculator</a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    <a href="#inam" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a href="#inam" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-
-                </div>
-
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" height="200px"  src="./profilePicture.jpg" "><span class="font-weight-bold">Х.Түвшинтөр</span><span class="text-black-50">totoenkuush@gmail.com</span><span> </span></div>
             </div>
-
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Хувийн мэдээлэл</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Нэр</label><input type="text" class="form-control" placeholder="" value="Түвшинтөр"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Регистрийн дугаар</label><input type="text" class="form-control" placeholder="enter phone number" value="УО00301791"></div>
+                        <div class="col-md-12"><label class="labels">Ургийн овог</label><input type="text" class="form-control" placeholder="enter address line 2" value="Цагаагч"></div>
+                        <div class="col-md-12"><label class="labels">Эцэг/Эх/-ийн нэр</label><input type="text" class="form-control" placeholder="enter address line 2" value="Халиун"></div>
+                        <div class="col-md-12"><label class="labels">Хүйс</label><input type="text" class="form-control" placeholder="enter address line 2" value="Эрэгтэй"></div>
+                        <div class="col-md-12"><label class="labels">Төрсөн газар</label><input type="text" class="form-control" placeholder="enter email id" value="Улаанбаатар, Баянгол дүүрэг"></div>
+                        <div class="col-md-12"><label class="labels">Төрсөн огноо</label><input type="text" class="form-control" placeholder="education" value="2000-10-17"></div>
+                        
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6"><label class="labels">Олгосон огноо</label><input type="text" class="form-control" placeholder="country" value="2021-08-04"></div>
+                        <div class="col-md-6"><label class="labels">Хүчинтэй хугацаа</label><input type="text" class="form-control" value="2041-03-02" placeholder="state"></div>
+                        <div class="col-md-6"><label class="labels">Хаяг</label><input type="text" class="form-control" value="Баянзүрх дүүрэг, 18-хороо, Khuslen Apartment, 25" placeholder="state"></div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+                </div>
+            </div>
         </div>
-
     </div>
-    <div class="thirddiv">
-        <div class="splitview skewed">
-            <div class="panel bottom">
-                <div class="content">
-                    <div class="description">
-                        <h1>JENNIE IS BREATHTAKING</h1>
-                        <p></p>
-                    </div>
-
-                    <img class="photo" src="myPHOTOS/jennie1.jpg" alt="Original">
-                </div>
-            </div>
-
-            <div class="panel top">
-                <div class="content">
-                    <div class="description">
-                        <h1>MEYO IS STUNNING</h1>
-                        <p></p>
-                    </div>
-
-                    <img class="photo" src="myPHOTOS/jennie9.jpg" alt="Duotone">
-                </div>
-            </div>
-
-            <div class="handle"></div>
-        </div>
-
     </div>
-    <div class="fourthdiv">
-        <ul class="ul1">
-
-            <li class="li1">
-                <a href="https://www.facebook.com/"> <i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="li1">
-                <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="li1"><a href="./counter.html"><i class="fas fa-minus"></i></a></li>
-            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
-            <li class="li1">
-                <a href="https://www.pinterest.com/"> <i class="fab fa-pinterest"></i></a>
-            </li>
-        </ul>
-
-
-
     </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var parent = document.querySelector('.splitview'),
-                topPanel = parent.querySelector('.top'),
-                handle = parent.querySelector('.handle'),
-                skewHack = 0,
-                delta = 0;
-
-            // If the parent has .skewed class, set the skewHack var.
-            if (parent.className.indexOf('skewed') != -1) {
-                skewHack = 1000;
-            }
-
-            parent.addEventListener('mousemove', function(event) {
-                // Get the delta between the mouse position and center point.
-                delta = (event.clientX - window.innerWidth / 2) * 0.5;
-
-                // Move the handle.
-                handle.style.left = event.clientX + delta + 'px';
-
-                // Adjust the top panel width.
-                topPanel.style.width = event.clientX + skewHack + delta + 'px';
-            });
-        });
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
-
 </html>
